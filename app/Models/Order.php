@@ -15,4 +15,12 @@ class Order extends Model
         'shipping_address',
         'order_status',
     ];
+
+    public function orderDetail(){
+        return $this->hasMany('App\Models\OrderDetail');
+    }
+
+    public function customer(){
+        return $this->belongsTo('App\Models\Customer');
+    }
 }

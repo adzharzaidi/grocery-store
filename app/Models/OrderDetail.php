@@ -15,4 +15,12 @@ class OrderDetail extends Model
         'price',
         'quantity',
     ];
+
+    public function order(){
+        return $this->hasMany('App\Models\Order');
+    }
+
+    public function product(){
+        return $this->belongsTo('App\Models\Product');
+    }
 }

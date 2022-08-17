@@ -15,4 +15,8 @@ class Seller extends Model
         'full_name',
         'phone',
     ];
+
+    public function product(){
+        return $this->hasMany('App\Models\Product');
+    }
 }
